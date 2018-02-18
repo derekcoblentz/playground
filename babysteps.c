@@ -28,7 +28,7 @@ int main(){
 		}
 	}
 
-	printf("\n\nWorking with matrix2 now...\n\n");
+	printf("\nWorking with matrix2 now...\n\n");
 
 	for(int i = 0; i < matrix2->size1; i++){
 		for(int j = 0; j < matrix2->size2; j++){
@@ -44,9 +44,9 @@ int main(){
 
 	gsl_blas_dgemm(CblasNoTrans, CblasNoTrans, 1.0, matrix, matrix2, 0.0, matrix3);
 
-	printf("\nm3 value is: %f\n\n", gsl_matrix_get(matrix3, 0, 0));
-	printf("\nm3 value is: %f\n\n", gsl_matrix_get(matrix3, 1, 0));
-	printf("\nm3 value is: %f\n\n", gsl_matrix_get(matrix3, 2, 0));
+	printf("\nMatrix3 value at (0, 0) is: %f", gsl_matrix_get(matrix3, 0, 0));
+	printf("\nMatrix3 value at (1, 0) is: %f", gsl_matrix_get(matrix3, 1, 0));
+	printf("\nMatrix3 value at (2, 0) is: %f\n\n", gsl_matrix_get(matrix3, 2, 0));
 
 	gsl_matrix_free(matrix);
 	gsl_matrix_free(matrix2);
